@@ -17,8 +17,8 @@ function walkCanvas() {
 	var i, j, x = [], y = [];
 	// initialize the walkers
 	for (i = 0; i < rw.walkerCount; i++) {
-		x[i] = randomIntFromInterval(0, rw.jCanvas.width);
-		y[i] = randomIntFromInterval(0, rw.jCanvas.height);
+		x[i] = randomIntFromInterval(0, rw.jCanvas.width());
+		y[i] = randomIntFromInterval(0, rw.jCanvas.height());
 		console.log("INOIT:", i, x[i], y[i]);
 	}
 	j = 0;
