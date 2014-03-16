@@ -4,6 +4,10 @@
 	background-color: #fff;
 }
 
+#controller {
+	display: none;
+}
+
 #controller input {
 	width: 3em;
 }

@@ -19,7 +19,7 @@ function walkCanvas() {
 	for (i = 0; i < rw.walkerCount; i++) {
 		x[i] = randomIntFromInterval(0, rw.jCanvas.width);
 		y[i] = randomIntFromInterval(0, rw.jCanvas.height);
-		console.log("INOIT:", x[i], y[i]);
+		console.log("INOIT:", i, x[i], y[i]);
 	}
 	j = 0;
 	while (walking) {
@@ -31,7 +31,7 @@ function walkCanvas() {
 			y[i] = walk(y[i]);
 			rw.ctx.lineTo(x[i], y[i]);
 			rw.ctx.stroke();
-			console.log(x[i], y[i]);
+			console.log(i, x[i], y[i]);
 		}
 		walking = (j < 20);
 	}
@@ -52,6 +52,7 @@ function canvasInit() {
 	rw.walkerCount = 1;
 	rw.ctx.lineWidth = 1;
 	rw.ctx.strokeStyle = "#000";
+	console("dim" rw.jCanvas.width, rw.jCanvas.height);
 	console.log("canvas initialized.");
 	walkCanvas();
 }
