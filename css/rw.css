@@ -1,0 +1,9 @@
+#theCanvas {
+	width: 800px;
+	height: 600px;
+	background-color: #fff;
+}
+
+#controller input {
+	width: 3em;
+}
