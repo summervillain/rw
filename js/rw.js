@@ -29,6 +29,7 @@ function walkCanvas() {
 			y[i] = walk(y[i]);
 			rw.ctx.lineTo(x[i], y[i]);
 			rw.ctx.stroke();
+			console.log(x[i], y[i]);
 		}
 	}
 }
