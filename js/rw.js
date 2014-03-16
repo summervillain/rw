@@ -33,7 +33,7 @@ function walkCanvas() {
 			rw.ctx.stroke();
 			console.log(i, x[i], y[i]);
 		}
-		walking = (j < 20);
+		walking = (j < 200);
 	}
 }
 
