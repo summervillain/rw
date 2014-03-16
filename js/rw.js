@@ -52,7 +52,7 @@ function canvasInit() {
 	rw.walkerCount = 1;
 	rw.ctx.lineWidth = 1;
 	rw.ctx.strokeStyle = "#000";
-	console("dim" rw.jCanvas.width, rw.jCanvas.height);
+	console("dim", rw.jCanvas.width, rw.jCanvas.height);
 	console.log("canvas initialized.");
 	walkCanvas();
 }
