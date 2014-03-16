@@ -19,6 +19,7 @@ function walkCanvas() {
 	for (i = 0; i < rw.walkerCount; i++) {
 		x[i] = randomIntFromInterval(0, rw.jCanvas.width);
 		y[i] = randomIntFromInterval(0, rw.jCanvas.height);
+		console.log("INOIT:", x[i], y[i]);
 	}
 	j = 0;
 	while (walking) {
@@ -51,15 +52,15 @@ function canvasInit() {
 	rw.walkerCount = 1;
 	rw.ctx.lineWidth = 1;
 	rw.ctx.strokeStyle = "#000";
-	walkCanvas();
 	console.log("canvas initialized.");
+	walkCanvas();
 }
 
 function pageInit() {
 	// master object to store data that persists throughout page lifetime
 	$("body").get(0).rw = {};
-	canvasInit();
 	console.log("page initialized.");
+	canvasInit();
 }
 
 $(document).ready(function () {pageInit(); });
