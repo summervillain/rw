@@ -6,7 +6,7 @@ function randomIntFromInterval(min, max) {
 }
 
 function walk(n) {
-	return n + randomIntFromInterval(-2, 2);
+	return (n + randomIntFromInterval(-2, 2));
 }
 
 function walkCanvas() {
@@ -14,14 +14,15 @@ function walkCanvas() {
 	var rw = $("body").get(0).rw;
 	console.log("walking...");
 	var walking = true;
-	var i, x = [], y = [];
+	var i, j, x = [], y = [];
 	// initialize the walkers
 	for (i = 0; i < rw.walkerCount; i++) {
 		x[i] = randomIntFromInterval(0, rw.jCanvas.width);
 		y[i] = randomIntFromInterval(0, rw.jCanvas.height);
 	}
-	
+	j = 0;
 	while (walking) {
+		j++;
 		for (i = 0; i < rw.walkerCount; i++) {
 			rw.ctx.beginPath();
 			rw.ctx.moveTo(x[i], y[i]);
@@ -31,6 +32,7 @@ function walkCanvas() {
 			rw.ctx.stroke();
 			console.log(x[i], y[i]);
 		}
+		walking = (j < 20);
 	}
 }
 
